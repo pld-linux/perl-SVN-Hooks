@@ -25,8 +25,15 @@ BuildRequires:	perl-SOAP-Lite
 BuildRequires:	perl-SVN-Look
 BuildRequires:	perl-SVN-Notify
 %endif
+Suggests:	perl-Email-Send
+Suggests:	perl-Email-Simple
+Suggests:	perl-JIRA-Client
+Suggests:	perl-SVN-Notify
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# skip deps required by scripts in Hooks dir, those should be optional
+%define		_noautoreq	perl(Email::Send) perl(Email::Simple) perl(Email::Simple::Creator) perl(File::Spec::Functions) perl(JIRA::Client) perl(XMLRPC::Lite)
 
 %description
 A single, simple script can be used as any kind of Subversion hook.
