@@ -4,7 +4,6 @@
 
 %define		pdir	SVN
 %define		pnam	Hooks
-%include	/usr/lib/rpm/macros.perl
 Summary:	SVN::Hooks - A framework for implementing Subversion hooks
 Name:		perl-SVN-Hooks
 Version:	0.32
