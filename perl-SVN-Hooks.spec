@@ -7,7 +7,7 @@
 Summary:	SVN::Hooks - A framework for implementing Subversion hooks
 Name:		perl-SVN-Hooks
 Version:	0.32
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -32,7 +32,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # skip deps required by scripts in Hooks dir, those should be optional
-%define		_noautoreq	perl(Email::Send) perl(Email::Simple) perl(Email::Simple::Creator) perl(File::Spec::Functions) perl(JIRA::Client) perl(XMLRPC::Lite)
+%define		_noautoreq_perl		Email::Send Email::Simple Email::Simple::Creator File::Spec::Functions JIRA::Client XMLRPC::Lite
 
 %description
 A single, simple script can be used as any kind of Subversion hook.
